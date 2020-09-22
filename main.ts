@@ -1,57 +1,102 @@
 input.onButtonPressed(Button.A, function () {
     basic.showLeds(`
+        . # # . .
         . # . # .
-        . # . # .
-        . # # # .
+        . # # . .
         . # . # .
         . # . # .
         `)
     send_image(1, 1, 9)
-    basic.pause(50)
+    basic.showLeds(`
+        . # # # .
+        . # . . .
+        . # # # .
+        . # . . .
+        . # # # .
+        `)
+    send_image(1, 2, 9)
     basic.showLeds(`
         . . # . .
+        . # . # .
+        . # . . .
+        . # . # .
         . . # . .
+        `)
+    send_image(2, 1, 9)
+    basic.showLeds(`
+        . # . # .
+        . # . # .
         . . # . .
         . . # . .
         . . # . .
         `)
+    send_image(2, 2, 9)
+    basic.pause(200)
+    basic.showLeds(`
+        . . # . .
+        . # . # .
+        . # . . .
+        . # . # .
+        . . # . .
+        `)
+    send_image(1, 1, 9)
+    basic.showLeds(`
+        . # . . .
+        . # . . .
+        . # . . .
+        . # . . .
+        . # # # .
+        `)
     send_image(1, 2, 9)
-    basic.pause(2000)
+    basic.showLeds(`
+        . # # # .
+        . # . . .
+        . # # # .
+        . # . . .
+        . # # # .
+        `)
+    send_image(2, 1, 9)
+    basic.showLeds(`
+        . . # . .
+        . . # . .
+        . . # . .
+        . . . . .
+        . . # . .
+        `)
+    send_image(2, 2, 9)
+    basic.pause(200)
     basic.showLeds(`
         . . . # #
         . . # . .
         . # . . .
-        # . . # .
+        # . . . .
         # . . . .
         `)
     send_image(1, 1, 9)
-    basic.pause(50)
     basic.showLeds(`
         # # . . .
         . . # . .
-        . . . # .
-        . # . . #
-        . . . . #
+        . # . # .
+        # # # # #
+        . # # # .
         `)
     send_image(1, 2, 9)
-    basic.pause(50)
     basic.showLeds(`
-        # . . . .
-        # . . # .
-        . # . . #
         . . # . .
-        . . . # #
-        `)
-    send_image(2, 1, 9)
-    basic.pause(50)
-    basic.showLeds(`
         . . . . .
-        . # . . #
-        # . . # .
+        . . . # .
         . . # . .
         # # . . .
         `)
     send_image(2, 2, 9)
+    basic.showLeds(`
+        # . . . .
+        # . . . .
+        . # . . .
+        . . # . .
+        . . . # #
+        `)
+    send_image(2, 1, 9)
 })
 // This function is the main part of the Controller code. It is required because there isn't a built-in one that can send an Image over the Radio. This function has three parameters:
 // - `row` and `column` -> these are used to select which micro:bit we want to send the image to. The micro:bits that form the big display will be arranged in rows and columns, and this is a handy way to pick which one we want.
